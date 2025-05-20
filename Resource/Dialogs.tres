@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="DialogList" load_steps=7 format=3 uid="uid://l6js8as2ed27"]
+
+[ext_resource type="Script" uid="uid://njk3hd4ddo1j" path="res://Scipt/Dialog/DialogData.cs" id="1_4x741"]
+[ext_resource type="Script" uid="uid://horohgcrsjaj" path="res://Scipt/Dialog/DialogList.cs" id="1_svar2"]
+
+[sub_resource type="Resource" id="Resource_ll1bh"]
+script = ExtResource("1_4x741")
+mainText = "你好呀"
+option1 = "喜欢"
+option2 = "不喜欢"
+option3 = ""
+id = 1
+nextId = 4
+nextIdop1 = 2
+nextIdop2 = 3
+nextIdop3 = 0
+isOver = false
+isStart = false
+metadata/_custom_type_script = "uid://njk3hd4ddo1j"
+
+[sub_resource type="Resource" id="Resource_4x741"]
+script = ExtResource("1_4x741")
+mainText = "开心"
+option1 = ""
+option2 = ""
+option3 = ""
+id = 2
+nextId = 0
+nextIdop1 = 0
+nextIdop2 = 0
+nextIdop3 = 0
+isOver = true
+isStart = false
+metadata/_custom_type_script = "uid://njk3hd4ddo1j"
+
+[sub_resource type="Resource" id="Resource_kox2a"]
+script = ExtResource("1_4x741")
+mainText = "不开心"
+option1 = ""
+option2 = ""
+option3 = ""
+id = 3
+nextId = 0
+nextIdop1 = 0
+nextIdop2 = 0
+nextIdop3 = 0
+isOver = true
+isStart = false
+metadata/_custom_type_script = "uid://njk3hd4ddo1j"
+
+[sub_resource type="Resource" id="Resource_7b5u4"]
+script = ExtResource("1_4x741")
+mainText = "为什么不回答我！"
+option1 = ""
+option2 = ""
+option3 = ""
+id = 4
+nextId = 0
+nextIdop1 = 0
+nextIdop2 = 0
+nextIdop3 = 0
+isOver = true
+isStart = false
+metadata/_custom_type_script = "uid://njk3hd4ddo1j"
+
+[resource]
+script = ExtResource("1_svar2")
+dialogsList = [SubResource("Resource_ll1bh"), SubResource("Resource_4x741"), SubResource("Resource_kox2a"), SubResource("Resource_7b5u4")]
+metadata/_custom_type_script = "uid://horohgcrsjaj"

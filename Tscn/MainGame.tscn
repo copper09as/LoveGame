@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://tvt5owgcnix4"]
+
+[ext_resource type="Script" uid="uid://dlmaexgehstvo" path="res://Scipt/Manager/DialogManager.cs" id="1_3v0by"]
+[ext_resource type="Resource" uid="uid://l6js8as2ed27" path="res://Resource/Dialogs.tres" id="2_xkx02"]
+[ext_resource type="Texture2D" uid="uid://0c2hbfkq87iv" path="res://icon.svg" id="3_xkx02"]
+
+[node name="MainGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DiagManager" type="Node" parent="." node_paths=PackedStringArray("richTextLabel", "optionBtn1", "optionBtn2", "optionBtn3", "nextBtn", "image", "timer")]
+script = ExtResource("1_3v0by")
+dialogs = ExtResource("2_xkx02")
+richTextLabel = NodePath("../DialogTxt")
+optionBtn1 = NodePath("../Buttons/Opt1")
+optionBtn2 = NodePath("../Buttons/Opt2")
+optionBtn3 = NodePath("../Buttons/Opt3")
+nextBtn = NodePath("../Buttons/Next")
+defaultImage = ExtResource("3_xkx02")
+image = NodePath("../Character")
+timer = NodePath("../Timer")
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Next" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0)
+offset_top = 650.0
+offset_right = 360.0
+offset_bottom = 798.0
+
+[node name="Opt1" type="Button" parent="Buttons"]
+offset_top = 111.0
+offset_right = 360.0
+offset_bottom = 222.0
+text = "选项1"
+
+[node name="Opt2" type="Button" parent="Buttons"]
+offset_top = 222.0
+offset_right = 360.0
+offset_bottom = 333.0
+text = "选项2"
+
+[node name="Opt3" type="Button" parent="Buttons"]
+offset_top = 333.0
+offset_right = 360.0
+offset_bottom = 444.0
+text = "选项3"
+
+[node name="Character" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 444.0
+offset_right = 426.0
+offset_bottom = 777.0
+scale = Vector2(0.529109, 0.529109)
+
+[node name="DialogTxt" type="RichTextLabel" parent="."]
+z_index = -1
+layout_mode = 0
+offset_top = 620.0
+offset_right = 360.0
+offset_bottom = 796.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.097
